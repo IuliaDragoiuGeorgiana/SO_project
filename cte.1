@@ -1,0 +1,25 @@
+.TH cte.sh 1
+.SH NAME
+cte.sh - Testing framework for C scripts.
+.SH SYNOPSIS
+.B cte.sh [sourceDir] [targetDir]
+.SH DESCRIPTION
+.B cte.sh
+This framework will traverse the folder you give, look for C scripts, run them, print the output, and then it will look for output files in the same directory and compare the output from the previously ran script with the values that it found in the output file. It will print a message regarding if the output from the script is as expected or not.
+.B Important
+The files containing the desired output values for every script must have the .out extension and the name of the actual C script.
+For example, for a script called hi.c the desired output values will be in a file called hi.out.
+The output files MUST be in the same directory as the C scripts.
+.SH OPTIONS
+.TP
+.BR sourceDir
+Must be a directory where the framework will search for the C scripts.
+.TP
+.BR targetDir
+Must be a directory that is a sibling of the source one, where the framework will store the executables that link to the C scripts.
+.SH AUTHOR
+Written by Iuliad Dragoiu and Stefan Secrieru
+.SH REPORTING BUGS
+Report any bug you encounter to stefan.secrieru02@e-uvt.ro
+.SH COPYRIGHT
+This is free software: you are free to change and redistribute it.
